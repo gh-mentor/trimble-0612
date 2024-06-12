@@ -54,7 +54,9 @@ namespace PayrollLibrary
         {
             get
             {
-                return _HourlyRate * _HoursWorked;
+                double payment = _HourlyRate * _HoursWorked;
+                return payment;
+               
             }
         }
 

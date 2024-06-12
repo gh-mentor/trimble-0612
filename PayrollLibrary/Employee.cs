@@ -1,5 +1,5 @@
 ﻿/*
-This file contains the abstract class Employee. This class is the base for the HourlyEmployee and SalariedEmployee classes. It contains the properties and methods that are common to both classes.
+This file contains the abstract class 'Employee'. This class is the base for the 'HourlyEmployee' and 'SalariedEmployee' classes. It contains the properties and methods that are common to both classes.
 */
 
 namespace PayrollLibrary
@@ -42,7 +42,19 @@ namespace PayrollLibrary
       DepartmentId = departmentId;
     }
 
+    // add a default c'tor set all properties to null
+    public Employee()
+    {
+      Id = null;
+      ReportsTo = null;
+      Name = null;
+      Email = null;
+      Mobile = null;
+      DepartmentId = null;
+    } 
+
     public abstract double Payment { get; }
+
     public virtual string EmployeeDetails
     {
       get
@@ -50,6 +62,8 @@ namespace PayrollLibrary
         return $"Id: {Id}, Name: {Name}, Email: {Email}, Mobile: {Mobile}, DepartmentId: {DepartmentId}";
       }
     }
-  }
-
+  } 
 }
+
+
+
