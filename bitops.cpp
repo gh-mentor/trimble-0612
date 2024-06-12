@@ -90,8 +90,6 @@ int main() {
     // call the test function
     test_conditionalBitSwap();
 
-    printf("All tests pass\n");
-
     return 0;
 }
 
